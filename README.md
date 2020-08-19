@@ -21,6 +21,9 @@ This job is made for groups of people to work on the same farm simultaniously to
 - Take user suggestions and possibly add them
 - Fix any bugs or exploits and make optimizations where needed
 
+### Known Caveats
+- The more crops that have been planted, the slower they will grow because it is iterating over more items in the table
+
 ### License
 Copyright (C) 2020 xXJamie_Xx
 
