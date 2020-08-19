@@ -4,7 +4,7 @@ game 'gta5'
 
 description 'ESX Community Farming Job'
 
-version '1.0'
+version '1.1'
 
 server_scripts {
 	'config.lua',

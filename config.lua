@@ -2,6 +2,7 @@ Config                            = {} -- leave this alone
 
 Config.lockerRoom = {x = 2932.03, y = 4624.34, z = 48.72} -- change position of locker room marker and blip
 Config.selectVehicle = {x = 2932.36, y = 4618.44, z = 48.72, spawnX = 2921.78, spawnY = 4632.62, spawnZ = 48.55, spawnHeading = 307.97} -- change position of vehicle spawn marker and where the vehicle will spawn
+Config.deleteVehicle = {x = 2921.63, y = 4624.09, z = 48.55} -- change position of vehicle delete marker
 
 -- add, remove and modify farms to your pleasing, change the name, map blip location, each corner location (should be roughly a square shape), and the number of crops in each row
 Config.farms = {

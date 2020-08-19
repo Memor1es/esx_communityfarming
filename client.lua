@@ -86,6 +86,10 @@ CreateThread(function()
             if working == true then
                 DrawMarker(1, Config.selectVehicle.x, Config.selectVehicle.y, Config.selectVehicle.z - 1, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.5, 1.5, 1.0, 255, 128, 0, 100, false, false, 2, false, false, false, false)
             end
+            -- vehicle delete marker
+            if working == true and GetVehiclePedIsIn(GetPlayerPed(-1)) ~= 0 then
+                DrawMarker(1, Config.deleteVehicle.x, Config.deleteVehicle.y, Config.deleteVehicle.z - 1, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 5.0, 5.0, 1.0, 255, 0, 0, 100, false, false, 2, false, false, false, false)
+            end
             -- wheat sell marker
             DrawMarker(1, Config.wheatSell.x, Config.wheatSell.y, Config.wheatSell.z - 1, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.5, 1.5, 1.0, 255, 128, 0, 100, false, false, 2, false, false, false, false)
 
@@ -108,6 +112,7 @@ CreateThread(function()
     local inLockerRoomMarker = false
     local inSelectVehicleMarker = false
     local inWheatSellMarker = false
+    local inVehicleDeleteMarker = false
     local inCropMarker = false
 
     while true do
@@ -133,6 +138,13 @@ CreateThread(function()
                 inWheatSellMarker = true
             else
                 inWheatSellMarker = false
+            end
+
+            -- vehicle delete marker
+            if(GetDistanceBetweenCoords(playerLoc, Config.deleteVehicle.x, Config.deleteVehicle.y, Config.deleteVehicle.z, true) < 2) and working == true and GetVehiclePedIsIn(GetPlayerPed(-1)) ~= 0 then
+                inVehicleDeleteMarker = true
+            else
+                inVehicleDeleteMarker = false
             end
 
             -- any crop marker
@@ -257,6 +269,19 @@ CreateThread(function()
             end
         end
 
+        if inVehicleDeleteMarker then
+            -- create help text
+            BeginTextCommandDisplayHelp("STRING");
+            AddTextComponentSubstringPlayerName("Press ~INPUT_CONTEXT~ to store vehicle");  
+            EndTextCommandDisplayHelp (0, 0, 1, -1);
+
+            local currentVehicle = GetVehiclePedIsIn(GetPlayerPed(-1))
+    
+            if IsControlPressed(0, 38) then
+                SetEntityAsMissionEntity(currentVehicle, true, true)
+                DeleteVehicle(currentVehicle)
+            end
+        end
 
         -- in in any crop marker
         if inCropMarker then
