@@ -1,5 +1,6 @@
 # esx_communityfarming
 Community farming resource for ESX servers on FiveM
+(This is my first FiveM resource, it may be unoptimized or written poorly but I'm happy with the result)
 
 ### Features
 - Configuration options to change map blip, marker locations and uniforms
