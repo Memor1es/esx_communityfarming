@@ -5,7 +5,7 @@ Community farming resource for ESX servers on FiveM
 - Configuration options to change map blip, marker locations and uniforms
 - Easily modify, add and remove your own farms in the config file to setup as many farms as you like as big or small as you like (note: more farms and bigger sizes may cause performance loss)
 
-## Download & Installation
+### Download & Installation
 1. Clone this repository somewhere in your resources folder (probably resources/[esx])
 2. Import `esx_communityfarming.sql` into your database
 3. Add `ensure esx_communityfarming` into your server.cfg file
