@@ -11,7 +11,7 @@ This job is made for groups of people to work on the same farm simultaniously to
 - Crops sync across players making it easy for groups of players to work on the same field at the same time
 
 ### Download & Installation
-1. Clone this repository somewhere in your resources folder (probably resources/[esx])
+1. Download the latest version[https://github.com/xXJamieXx/esx_communityfarming/releases/latest] and copy it to somewhere in your resources folder (probably resources/[esx])
 2. Import `esx_communityfarming.sql` into your database
 3. Add `ensure esx_communityfarming` into your server.cfg file
 
