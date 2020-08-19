@@ -7,6 +7,7 @@ This job is made for groups of people to work on the same farm simultaniously to
 ### Features
 - Configuration options to change map blip, marker locations, uniforms and prices
 - Easily modify, add and remove your own farms in the config file to setup as many farms as you like as big or small as you like (note: more farms and bigger sizes may cause performance loss)
+- Crops sync across players making it easy for groups of players to work on the same field at the same time
 
 ### Download & Installation
 1. Clone this repository somewhere in your resources folder (probably resources/[esx])
